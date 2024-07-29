@@ -1,0 +1,152 @@
+.sidebar {
+    height: 100vh;
+    background-color: #012970;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    width: 230px;
+    position:sticky;
+    top: 0;
+}
+
+.sidebar.collapsed {
+    width: 60px; /* Adjust this width to whatever you prefer for the collapsed state */
+}
+
+.sidebar {
+    margin-top: 60px;
+}
+
+.sidebar span {
+    color: #ffffff;
+    margin: 2px;
+}
+
+.sidebar span1 {
+    color: #ffffff;
+    
+}
+
+.sidebar-nav {
+    margin-top: 30px;
+}
+
+.sidebar a {
+    color: #f0f0f0;
+}
+
+.sidebar i {
+    color: #f0f0f0;
+    margin-left: 9px;
+}
+
+.sidebar i1{
+    margin-right: 12px;
+    color: #f0f0f0;
+}
+
+.sidebar i2{
+    margin-right: 12px;
+    color: #f0f0f0;
+}
+
+.sidebar-nav {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+}
+
+.sidebar-nav .nav-item {
+    margin-bottom: 15px; /* Adds space between each nav-item */
+}
+
+.sidebar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove default link underline */
+    color: inherit; /* Inherit text color */
+    padding: 10px;
+    transition: background-color 0.3s ease; /* Add some transition for hover effect */
+}
+
+.sidebar-nav .nav-link:focus {
+    background-color: #f0f0f0; /* Change background color on hover */
+}
+
+.sidebar-nav .nav-link:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+}
+
+.sidebar-nav .nav-link:hover span,
+.sidebar-nav .nav-link:hover span1,
+.sidebar-nav .nav-link:hover a,
+.sidebar-nav .nav-link:hover i,
+.sidebar:hover i1
+{
+    color: black; /* Change text color on hover */
+}
+
+.sidebar-nav .nav-link:focus span,
+.sidebar-nav .nav-link:focus span1,
+.sidebar-nav .nav-link:focus a,
+.sidebar-nav .nav-link:focus i,
+.sidebar:hover i1
+.sidebar
+{
+    color: black; /* Change text color on hover */
+}
+
+.nav-content {
+    padding-left: 20px; /* Indent nested list items */
+}
+
+.nav-content .nav-item {
+    margin-bottom: 10px; /* Add space between nested nav-items */
+}
+
+@media(min-width: 1200px) {
+    #main,
+    #footer {
+        margin-left: 300px;
+    }
+}
+
+.sidebar:focus {
+    background-color:#ffffff;
+}
+
+/* @media (max-width: 1199px) {
+    .toggle-sidebar .sidebar {
+        left: 0;
+        color: red;
+    }
+}
+
+@media (min-width: 1200px) {
+    .toggle-sidebar #main,
+    .toggle-sidebar #footer {
+        margin-left: 0;
+    }
+}
+
+.toggle-sidebar .sidebar {
+    left: -300px; 
+    color: red;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+    background-color: #012970;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-button:hover {
+    background-color: #0056b3;
+} */

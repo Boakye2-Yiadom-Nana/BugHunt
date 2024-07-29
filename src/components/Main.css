@@ -1,0 +1,15 @@
+.main {
+    margin-top: 0px;
+    transition: all 0.3s;
+    height: 100%;
+    margin-top: 70px;
+    width: 100%;
+    margin-left: 4px;
+}
+
+
+/* @media (max-width: 1119px){
+    #main {
+        padding: 20px;
+    }
+} */

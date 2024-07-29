@@ -1,0 +1,49 @@
+/* BugUpdate.css */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    text-align: left;
+  }
+  
+  table thead tr {
+    background-color: #012970;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  table th,
+  table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+  }
+  
+  table td {
+    color: #012970;
+  }
+  
+  table tbody tr {
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  table tbody tr:last-of-type {
+    border-bottom: 2px solid #012970;
+  }
+  
+  .bugh1 {
+    color: #012970;
+  }
+  
+  .BugH1{
+    color: #012970;
+  }
+
+  .table table-striped{
+    background-color: #012970;
+  }

@@ -1,0 +1,339 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: background-color 0.5s ease;
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/bac1.JFIF') center/cover no-repeat;
+    height: 50vh;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    position: relative; /* Ensure relative positioning for stacking */
+}
+
+.hero nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 15px; /* Add spacing between items */
+}
+
+.nav-links li {
+    font-weight: bold;
+    margin: 0 10px; /* Adjust margin for links */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-links a:focus {
+    background-color: #ff5722;
+    padding: 5px;
+    border-radius: 7px;
+    color: white;
+}
+
+.nav-links input {
+    padding: 7px;
+    outline: none;
+    border: none;
+    border-radius: 100px;
+    margin-left: auto; /* Push input to the right */
+}
+
+.close-btn {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.text-div h1 {
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.food-name {
+    color: #ff5722;
+}
+
+.img-div img {
+    width: 300px;
+    height: 300px;
+}
+
+.products-container {
+    background-color: #ff5722;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 40px;
+    color: #F7F9F2;
+    overflow-x: auto;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #ff5722 #F7F9F2;
+    transition: background-color 0.5s ease-in-out;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.products-container-content {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 40px;
+    color: #F7F9F2;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    text-align: center;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.product-item img {
+    width: 100px;
+    height: 100px;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    background-color: rgba(255, 87, 34, 0.2); /* Transparent background */
+    transition: background-color 0.5s ease-in-out;
+}
+
+.menu-item {
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px;
+    background-color: #F7F9F2;
+}
+
+.menu-item img {
+    width: 250px;
+    height: 250px;
+}
+
+.menu-item button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.menu-item button:hover {
+    background-color: #e64a19;
+}
+
+.about-contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    position: relative; /* Ensure relative positioning */
+    z-index: 1; /* Ensure above footer */
+    opacity: 0.9;
+}
+
+.about-us {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/b3.JFIF') center/cover no-repeat;
+    width: 100%;
+    height: 15rem;
+    text-align: center;
+    padding-top: 60px;
+    color: #939185;
+    
+    z-index: 0; /* Behind footer */
+}
+
+.about-us h2 {
+    color: #EEEDEB;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: rgb(1, 1, 26);
+    padding: 20px 0;
+    text-align: center;
+    color: #939185;
+    margin-top: auto;
+    transition: background-color 0.5s ease;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-section-contact-info p,
+.footer-section h3 {
+    color: #EEEDEB;
+}
+
+.footer-section {
+    max-width: 300px;
+}
+
+.social-links {
+    list-style: none;
+}
+
+.social-links li {
+    margin: 10px 0;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.footer-bottom {
+    background-color: #000;
+    padding: 20px 0;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .close-btn {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 50vh;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .nav-links.active {
+        transform: translateX(0);
+    }
+
+    .products-container, .about-contact-container {
+        flex-direction: column;
+    }
+
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin-bottom: 10px;
+    }
+
+    .img-div img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .hero {
+        margin-bottom: 40px;
+    }
+}
