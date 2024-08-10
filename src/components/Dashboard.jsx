@@ -5,6 +5,7 @@ import Reports from './Reports';
 import BugUpdate from './BugUpdate';
 import ReportSubmission from './ReportSubmission';
 import UserPage from './UserPage';
+import EmailForm from './EmailForm';
 const Dashboard = () => {
   return (
     <section className="dashboard-section">
@@ -19,6 +20,8 @@ const Dashboard = () => {
     <BugUpdate/>
   </div>
   <UserPage/>
+  <EmailForm/>
+
 
             </div>
         </div>
