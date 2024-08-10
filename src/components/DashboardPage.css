@@ -1,0 +1,40 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Layout container */
+  .hello {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  /* Main content container */
+  .main-content {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  /* Sidebar styling */
+  .sidebar {
+    background-color: #f8f9fa;
+    width: 250px;
+    flex-shrink: 0;
+    overflow-y: auto;
+    padding: 20px;
+  }
+  
+  /* Main section */
+  .main {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  /* Report submission styling */
+
+  

@@ -1,8 +1,9 @@
 
 
 .dashboard-section {
-    margin-left: 20px;
+    margin-left: 40px;
     overflow: hidden;
+    align-items: center;
 }
 .row{
     overflow: hidden;

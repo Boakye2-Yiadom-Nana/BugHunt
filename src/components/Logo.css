@@ -1,21 +1,60 @@
-.logo{
+.logo {
     line-height: 1;
-}
-
-@media (min-width: 1200px){
-  .logo {
-        width: 280px;
-}
-}
-
-.logo img{
+  }
+  
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) {
+    .logo {
+      width: 150px;
+    }
+  
+    .logo span {
+      font-size: 20px;
+    }
+  }
+  
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) {
+    .logo {
+      width: 200px;
+    }
+  
+    .logo span {
+      font-size: 22px;
+    }
+  }
+  
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) {
+    .logo {
+      width: 240px;
+    }
+  
+    .logo span {
+      font-size: 24px;
+    }
+  }
+  
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {
+    .logo {
+      width: 280px;
+    }
+  
+    .logo span {
+      font-size: 26px;
+    }
+  }
+  
+  .logo img {
     max-height: 26px;
     margin-right: 6px;
-}
-
-.logo span{
+  }
+  
+  .logo span {
     font-size: 26px;
     font-weight: 700;
     color: #012970;
-    font-family: 'nonito', sans-serif;
-}
+    font-family: 'Nunito', sans-serif; /* Corrected the font family name */
+  }
+  

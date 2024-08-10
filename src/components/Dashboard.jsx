@@ -4,6 +4,7 @@ import Card from './Card';
 import Reports from './Reports';
 import BugUpdate from './BugUpdate';
 import ReportSubmission from './ReportSubmission';
+import UserPage from './UserPage';
 const Dashboard = () => {
   return (
     <section className="dashboard-section">
@@ -17,6 +18,8 @@ const Dashboard = () => {
   <div className="col-12">
     <BugUpdate/>
   </div>
+  <UserPage/>
+
             </div>
         </div>
         <div className="col-lg-4">

@@ -11,7 +11,7 @@ export const Header = () => {
 <header id='header' className='header fixed-top d-flex align-items-center'>
     <Logo/>
       {/* {search bar}*/}
-      <SearchBar/>
+      {/* <SearchBar/> */}
         {/* {nav}*/}
         <Nav/>
        

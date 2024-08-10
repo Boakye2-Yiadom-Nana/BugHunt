@@ -4,37 +4,23 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 
 import './App.css';
-import { Header } from './components/Header';
-import SideBar from './components/SideBar';
-import Main from './components/Main';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import ReportSubmission from './components/ReportSubmission';
-
-
-
+import LandingPage from './components/LandingPage';
+import DashboardPage from './components/DashboardPage';
+import UserPage from './components/UserPage';
 
 function App() {
-  
-
-
   return (
-    <>
-     
-     <div className='hello'>
-     <Header/>
-     <SideBar/>
-    
-     <Main/>
-     
-     </div>
-     <ReportSubmission/>
-    
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
+      </Routes>
+    </Router>
 
-
-  
-    
-    </>
   );
+  <UserPage/>
+
 }
 
 export default App;

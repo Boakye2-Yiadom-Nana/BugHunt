@@ -1,0 +1,16 @@
+.filter-container {
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .bug-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  h1 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
