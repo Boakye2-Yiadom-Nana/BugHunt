@@ -5,7 +5,6 @@ import profileImg from "../images/nana.jpg";
 
 const NavAvatar = () => {
   const navigate = useNavigate();
-
   const handleLogout = async () => {
     try {
       console.log('Logout function called'); // Debugging
