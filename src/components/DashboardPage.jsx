@@ -15,10 +15,8 @@ const DashboardPage = () => {
 
       <Dashboard/>
       <Main />
-      {/* <UserPage/> */}
 
 
-      {/* <ReportSubmission /> */}
     </div>
   );
 }

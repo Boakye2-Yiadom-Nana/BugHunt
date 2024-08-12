@@ -20,7 +20,6 @@ const Dashboard = () => {
     <BugUpdate/>
   </div>
   <UserPage/>
-  <EmailForm/>
 
 
             </div>

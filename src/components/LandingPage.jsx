@@ -30,7 +30,7 @@ function GetStarted({ navigate }) {
     <section className="get-started">
       <h2>Get Started With Us</h2>
       <p>Join us in making the web a better place by hunting bugs and improving software quality.</p>
-      <button onClick={() => navigate('/dashboard')}>Get Started</button>
+      <button onClick={() => navigate('/Login')}>Get Started</button>
     </section>
   );
 }

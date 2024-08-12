@@ -11,4 +11,5 @@ const BugCard = ({ language, bug, solution }) => {
   );
 };
 
+
 export default BugCard;

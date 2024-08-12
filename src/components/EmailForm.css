@@ -1,51 +1,82 @@
-.email-form-container {
-    max-width: 600px;
+/* Container styling */
+form {
+    max-width: 500px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
     background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
-  .email-form-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
+  /* Label styling */
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
   }
   
-  .email-form-container form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .email-form-container label {
-    margin-bottom: 10px;
-  }
-  
-  .email-form-container input,
-  .email-form-container textarea {
+  /* Input and textarea styling */
+  input[type="text"],
+  input[type="email"],
+  textarea {
     width: 100%;
     padding: 10px;
-    margin-top: 5px;
+    margin-bottom: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
   }
   
-  .email-form-container button {
-    padding: 10px;
-    background-color: #4CAF50;
+  /* Textarea styling for larger text areas */
+  textarea {
+    height: 120px;
+    resize: vertical;
+  }
+  
+  /* Submit button styling */
+  input[type="submit"] {
+    display: inline-block;
+    width: 100%;
+    padding: 12px;
+    background-color: #0842a5;
     color: white;
+    font-size: 16px;
+    font-weight: bold;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    margin-top: 10px;
+    transition: background-color 0.3s ease;
   }
   
-  .email-form-container button:hover {
-    background-color: #45a049;
+  /* Hover effect for the submit button */
+  input[type="submit"]:hover {
+    background-color: #012970;
   }
   
-  .status-message {
-    margin-top: 10px;
-    font-weight: bold;
+  /* Add focus outline for accessibility */
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #012970;
+    box-shadow: 0 0 5px rgba(5, 54, 146, 0.5);
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    form {
+      padding: 15px;
+    }
+  
+    label,
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    input[type="submit"] {
+      font-size: 14px;
+    }
   }
   

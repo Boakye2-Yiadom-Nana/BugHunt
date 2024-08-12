@@ -322,7 +322,7 @@ const App = () => {
   const languages = [...new Set(bugs.map(bug => bug.language))];
 
   return (
-    <div>
+    <div className='head'>
       <h1>Programming Bugs and Solutions</h1>
       <Filter 
         languages={languages} 
@@ -339,9 +339,10 @@ const App = () => {
           />
         ))}
       </div>
+<EmailForm/>
+
     </div>
   );
 };
-
 
 export default App;
