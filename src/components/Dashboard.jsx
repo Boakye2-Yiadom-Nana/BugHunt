@@ -12,15 +12,15 @@ const Dashboard = () => {
     <div className="row">
         <div className="col-lg-12">
             <div className="row">
-  <Card/>
-  <div className="col-12">
-    <Reports/>
-  </div>
-  <div className="col-12">
-    <BugUpdate/>
-  </div>
-  <UserPage/>
-  <EmailForm/>
+          <Card/>
+        <div className="col-12">
+          <Reports/>
+        </div>
+        <div className="col-12">
+          <BugUpdate/>
+        </div>
+        <UserPage/>
+        <EmailForm/>
 
 
             </div>
