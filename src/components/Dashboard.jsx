@@ -1,11 +1,11 @@
-import React,{useState,useEffect} from 'react';
+import React from 'react';
 import './Dashboard.css';
 import Card from './Card';
 import Reports from './Reports';
 import BugUpdate from './BugUpdate';
-import ReportSubmission from './ReportSubmission';
+// import ReportSubmission from './ReportSubmission';
 import UserPage from './UserPage';
-import EmailForm from './EmailForm';
+// import EmailForm from './EmailForm';
 const Dashboard = () => {
   return (
     <section className="dashboard-section">
