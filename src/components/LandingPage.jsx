@@ -2,7 +2,7 @@ import React from 'react';
 import './LandingPage.css';
 import { useNavigate } from 'react-router-dom';
 import avatarImage from '../images/image.png';
-import UserPage from './UserPage';
+// import UserPage from './UserPage';
 
 function LandingPage() {
   const navigate = useNavigate();
