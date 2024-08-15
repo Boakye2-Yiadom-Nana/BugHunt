@@ -20,7 +20,7 @@ function LandingPage() {
 function Header() {
   return (
     <header className="App-header">
-      <h1>Welcome to Bughunt</h1>
+      <h1><span1 className="d-none d-lg-block">B<i className='bi bi-bug-fill'></i>GHUNT</span1>   <span className="d-none d-lg-block"> Welcome To   B<i className='bi bi-bug-fill'></i>GHUNT</span></h1>
     </header>
   );
 }

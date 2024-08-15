@@ -1,15 +1,36 @@
 .App {
-    text-align: center;
+    text-align:center;
     font-family: Arial, sans-serif;
     padding: 20px;
   }
   
   .App-header {
     background-color: #012970;
-    padding: 20px;
+    padding: 5px;
     color: white;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    border-radius: 5px;
   }
-  
+  .App-header h1{
+    text-align: left;
+    font-size: 20px;
+    margin-left: 4px;
+  }
+
+  .welcome{
+    text-align: center;
+  }
+  .App-header span{
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 25px;
+  }
+.App-header span1{
+  margin-top: 10px;
+}
   .get-started {
     margin: 40px 0;
   }
@@ -59,8 +80,8 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 200px;
     text-align: left;
+    width: 150px;
   }
   
   .team-member h3 {
@@ -81,8 +102,11 @@
     padding: 20px;
     background-color: #012970;
     color: white;
+    border-radius: 5px;
   }
-  
+  .App-footer p{
+    color: #ffff;
+  }
   .get-started  h2{
      color: black;
   }

@@ -1,9 +1,4 @@
-body {
-    background-image: url('backimg.png');
-    background-size:100%; /* Optional: Ensures the image covers the entire background */
-    background-position: center; /* Optional: Centers the image */
-    background-repeat: no-repeat; /* Optional: Prevents the image from repeating */
-}
+
 
 h2{
     text-align: center;

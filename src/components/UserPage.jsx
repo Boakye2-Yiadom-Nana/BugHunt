@@ -322,10 +322,11 @@ const App = () => {
   const languages = [...new Set(bugs.map(bug => bug.language))];
 
   return (
+    
     <div className='head'>
       <h1>Programming Bugs and Solutions</h1>
       <Filter 
-        languages={languages} 
+        languages ={languages} 
         selectedLanguage={selectedLanguage}
         onLanguageChange={handleLanguageChange}
       />
