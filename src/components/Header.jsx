@@ -1,9 +1,9 @@
 import React from 'react';
 import './Header.css';
 import Logo from './Logo';
-import SearchBar from './SearchBar';
+// import SearchBar from './SearchBar';
 import Nav from './Nav';
-import SideBar from './SideBar';
+// import SideBar from './SideBar';
 
 
 export const Header = () => {
