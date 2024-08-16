@@ -1,8 +1,9 @@
 /* BugUpdate.css */
+
+
 table {
-    width: 100%;
+    width: 15px;
     border-collapse: collapse;
-    margin: 20px 0;
     font-size: 18px;
     text-align: left;
   }
@@ -16,7 +17,7 @@ table {
   
   table th,
   table td {
-    padding: 12px 15px;
+    padding: 5px 5px;
     border: 1px solid #ddd;
   }
   

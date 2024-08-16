@@ -9,6 +9,8 @@ import DashboardPage from './components/DashboardPage';
 import Login from './components/login';
 import Register from './components/register';
 import UserPage from './components/UserPage';
+import BugPage from './components/bug';
+
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route path="/dashboard" element={<DashboardPage />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/UserPage" element={<UserPage />} />
+        <Route path="/BugPage" element={<BugPage />} />
       </Routes>
     </Router>
 

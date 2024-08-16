@@ -3,9 +3,20 @@ import BugCard from './BugCard';
 import Filter from './Filter';
 import './UserPage.css';
 import EmailForm from './EmailForm';
+import { useNavigate } from 'react-router-dom';
+import { MdArrowBack } from 'react-icons/md';
+
+
 
 
 const App = () => {
+  const navigate = useNavigate();
+  // ... rest of your component logic ...
+
+  const handleBackToDashboard = () => {
+    navigate('/dashboard');
+  };
+  
   const bugs = [
     {
       language: 'Python',
@@ -323,7 +334,11 @@ const App = () => {
 
   return (
     <div>
+       <MdArrowBack onClick={handleBackToDashboard} style={{ cursor: 'pointer', fontSize: '100px' }} />
       <h1>Programming Bugs and Solutions</h1>
+     
+
+      
       <Filter 
         languages={languages} 
         selectedLanguage={selectedLanguage}
@@ -339,6 +354,7 @@ const App = () => {
           />
         ))}
       </div>
+      <EmailForm/>
     </div>
   );
 };

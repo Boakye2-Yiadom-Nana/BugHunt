@@ -15,11 +15,13 @@ const navList =[
     href:'ReportSumission.jsx'
    },
 
-   { _id: 4,
-    name: ' comment',
-    icon: 'bi bi-chat-text-fill'
-   },
-
+   {
+      _id: 4,
+      name: 'Contact Us',
+      icon: 'bi bi-chat-text-fill',
+      href:'UserPage.jsx'
+    }
+    
 ]
 
 export default navList;

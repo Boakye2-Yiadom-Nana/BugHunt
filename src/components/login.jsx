@@ -11,12 +11,19 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+    
         try {
             const response = await axios.post('http://localhost:5000/api/users/login', { email, password });
-            console.log('Login successful:', response.data);
-            setAlert({ type: 'success', message: 'Login successful!' });
             
+            console.log('Login successful:', response.data);
+            
+            // Store the token in localStorage
+            localStorage.setItem('token', response.data.token);
+            localStorage.setItem('email', email); // Store user email
+            console.log('Stored token:', response.data.token);
+    
+            setAlert({ type: 'success', message: 'Login successful!' });
+           
             // Redirect to the main page after successful login
             setTimeout(() => {
                 navigate('/dashboard');
@@ -26,6 +33,7 @@ const Login = () => {
             setAlert({ type: 'danger', message: error.response.data.message || 'Login failed' });
         }
     };
+    
 
     const closeAlert = () => {
         setAlert(null);

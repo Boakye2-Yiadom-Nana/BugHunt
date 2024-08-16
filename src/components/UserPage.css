@@ -1,6 +1,8 @@
+
 .filter-container {
     margin: 20px;
     text-align: center;
+    margin-top: 50px;
   }
   
   .bug-list {
@@ -12,5 +14,19 @@
   h1 {
     text-align: center;
     font-family: Arial, sans-serif;
+  }
+  .email-form{
+    margin-bottom: auto;
+  }
+  .contact-container.static-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  .contact-container {
+    padding-top: 60px; /* Adjust this value based on your header's height */
   }
   
