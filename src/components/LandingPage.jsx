@@ -2,6 +2,7 @@ import React from 'react';
 import './LandingPage.css';
 import { useNavigate } from 'react-router-dom';
 import avatarImage from '../images/image.png';
+// import UserPage from './UserPage';
 
 function LandingPage() {
   const navigate = useNavigate();
@@ -19,7 +20,7 @@ function LandingPage() {
 function Header() {
   return (
     <header className="App-header">
-      <h1>Welcome to Bughunt</h1>
+      <h1><span1 className="d-none d-lg-block">B<i className='bi bi-bug-fill'></i>GHUNT</span1>   <span className="d-none d-lg-block"> Welcome To   B<i className='bi bi-bug-fill'></i>GHUNT</span></h1>
     </header>
   );
 }
@@ -29,7 +30,7 @@ function GetStarted({ navigate }) {
     <section className="get-started">
       <h2>Get Started With Us</h2>
       <p>Join us in making the web a better place by hunting bugs and improving software quality.</p>
-      <button onClick={() => navigate('/login')}>Get Started</button>
+      <button onClick={() => navigate('/userpage')}>Get Started</button>
     </section>
   );
 }

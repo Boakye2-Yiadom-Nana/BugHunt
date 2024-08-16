@@ -1,104 +1,128 @@
 .App {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    padding: 20px;
-  }
-  
-  .App-header {
-    background-color: #012970;
-    padding: 20px;
-    color: white;
-  }
-  
-  .get-started {
-    margin: 40px 0;
-  }
-  
-  .get-started h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .get-started p {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-  
-  .get-started button {
-    padding: 10px 20px;
-    font-size: 18px;
-    color: white;
-    background-color: #104b86;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .get-started button:hover {
-    background-color: #012970;
-  }
-  
-  .our-team {
-    margin: 40px 0;
-  }
-  
-  .our-team h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .team-members {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .team-member {
-    background-color: #f8f9fa;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 200px;
-    text-align: left;
-  }
-  
-  .team-member h3 {
-    font-size: 20px;
-    margin-bottom: 5px;
-  }
-  
-  .team-member p {
-    font-size: 16px;
-    color: #012970;
-  }
-  .team-member h3{
-    color: #012970;
-  }
+  text-align:center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
 
-  .App-footer {
-    margin-top: 40px;
-    padding: 20px;
-    background-color: #012970;
-    color: white;
-  }
-  
-  .get-started  h2{
-     color: black;
-  }
+.App-header {
+  background-color: #012970;
+  padding: 5px;
+  color: white;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  border-radius: 5px;
+}
+.App-header h1{
+  text-align: left;
+  font-size: 20px;
+  margin-left: 4px;
+}
 
-  .get-started p{
-    color: black;
-  }
-  .our-team{
-    color: black;
-  }
-  .App-header span{
-    margin-top: 20px;
-  }
-  .team-member-avatar {
-    width: 100px; /* Adjust size as needed */
-    height: 100px; /* Adjust size as needed */
-    border-radius: 50%;
-    margin-bottom: 10px;
-  }
+.welcome{
+  text-align: center;
+}
+.App-header span{
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 25px;
+}
+.App-header span1{
+margin-top: 10px;
+}
+.get-started {
+  margin: 40px 0;
+}
+
+.get-started h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.get-started p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.get-started button {
+  padding: 10px 20px;
+  font-size: 18px;
+  color: white;
+  background-color: #104b86;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.get-started button:hover {
+  background-color: #012970;
+}
+
+.our-team {
+  margin: 40px 0;
+}
+
+.our-team h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.team-members {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.team-member {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  width: 150px;
+}
+
+.team-member h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.team-member p {
+  font-size: 16px;
+  color: #012970;
+}
+.team-member h3{
+  color: #012970;
+}
+
+.App-footer {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #012970;
+  color: white;
+  border-radius: 5px;
+}
+.App-footer p{
+  color: #ffff;
+}
+.get-started  h2{
+   color: black;
+}
+
+.get-started p{
+  color: black;
+}
+.our-team{
+  color: black;
+}
+.App-header span{
+  margin-top: 20px;
+}
+.team-member-avatar {
+  width: 100px; /* Adjust size as needed */
+  height: 100px; /* Adjust size as needed */
+  border-radius: 50%;
+  margin-bottom: 10px;
+}

@@ -1,61 +1,53 @@
-import React, { useState, useRef } from 'react';
-import emailjs from 'emailjs-com';
-import './EmailForm.css';
+import React, { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+import './EmailForm.css';  // Assuming you're importing a CSS file for styling
 
-// Example OAuth scopes for Gmail API
-const SCOPES = [
-  'https://www.googleapis.com/auth/gmail.send',
-  'https://www.googleapis.com/auth/gmail.readonly'
-];
-
-const EmailForm = () => {
-  const [status, setStatus] = useState('');
+const ContactUs = () => {
   const form = useRef();
-
-  const handleChange = (e) => {
-    // You can remove this function if you don't need to manage state for form inputs
-  };
+  const [statusMessage, setStatusMessage] = useState('');  // State for displaying messages
+  const [isSuccess, setIsSuccess] = useState(null);  // State to track if the submission was successful or failed
 
   const sendEmail = (e) => {
     e.preventDefault();
 
     emailjs
-      .sendForm('service_g65nucb', 'template_j4992lk', form.current, 'd8c5JA5zSbeJRZEhA')
+      .sendForm('service_ide7oqt', 'template_pu0o7r8', form.current, 'd8c5JA5zSbeJRZEhA')
       .then(
         () => {
-          setStatus('Email sent successfully!');
+          setStatusMessage('Email sent successfully!');
+          setIsSuccess(true);
+          form.current.reset();  // Reset the form after successful submission
         },
         (error) => {
-          setStatus('Failed to send email. Please try again later.');
-        },
+          setStatusMessage('Failed to send email. Please try again later.');
+          setIsSuccess(false);
+          console.error('FAILED...', error.text);
+        }
       );
-
-    // Optionally reset the form after submission
-    form.current.reset();
   };
 
   return (
     <div className="email-form-container">
-      <h2>Contact Us</h2>
       <form ref={form} onSubmit={sendEmail}>
-        <label>Name:</label>
+        <label>Name</label>
         <input type="text" name="user_name" required />
         
-        <label>Email:</label>
+        <label>Email</label>
         <input type="email" name="user_email" required />
         
-        <label>Subject:</label>
-        <input type="text" name="subject" required />
-        
-        <label>Message:</label>
+        <label>Message</label>
         <textarea name="message" required />
         
         <input type="submit" value="Send" />
         
-        {status && <p className="status-message">{status}</p>}
+        {statusMessage && (
+          <p className={isSuccess ? 'success-message' : 'error-message'}>
+            {statusMessage}
+          </p>
+        )}
       </form>
     </div>
   );
 };
 
-export default EmailForm;
+export default ContactUs;

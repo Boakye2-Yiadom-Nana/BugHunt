@@ -4,19 +4,9 @@ import Filter from './Filter';
 import './UserPage.css';
 import EmailForm from './EmailForm';
 import { useNavigate } from 'react-router-dom';
-import { MdArrowBack } from 'react-icons/md';
-
-
 
 
 const App = () => {
-  const navigate = useNavigate();
-  // ... rest of your component logic ...
-
-  const handleBackToDashboard = () => {
-    navigate('/dashboard');
-  };
-  
   const bugs = [
     {
       language: 'Python',
@@ -321,6 +311,7 @@ const App = () => {
   ];
 
   const [selectedLanguage, setSelectedLanguage] = useState('');
+  const navigate = useNavigate();
 
   const handleLanguageChange = (event) => {
     setSelectedLanguage(event.target.value);
@@ -332,13 +323,13 @@ const App = () => {
 
   const languages = [...new Set(bugs.map(bug => bug.language))];
 
-  return (
-    <div>
-       <MdArrowBack onClick={handleBackToDashboard} style={{ cursor: 'pointer', fontSize: '100px' }} />
-      <h1>Programming Bugs and Solutions</h1>
-     
+  const handleLoginNavigation = () => {
+    navigate('/login'); // Adjust the path as needed
+  };
 
-      
+  return (
+    <div className='head'>
+      <h1>Programming Bugs and Solutions</h1>
       <Filter 
         languages={languages} 
         selectedLanguage={selectedLanguage}
@@ -354,10 +345,14 @@ const App = () => {
           />
         ))}
       </div>
-      <EmailForm/>
+      
+      {/* <EmailForm /> */}
+
+      <button onClick={handleLoginNavigation} className="login-button">
+        Go to Login
+      </button>
     </div>
   );
 };
-
 
 export default App;
