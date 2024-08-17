@@ -34,15 +34,15 @@ const Card = () => {
       <div className="reported">
         <li className='bi bi-bug-fill'>
           <span>Reported Bugs</span>
-          <h1><CountUp end={reportedBugs} />K</h1>
-          <i className="bi bi-activity"> 0.2%</i>
+          <h1><CountUp end={reportedBugs} /></h1>
+          <i className="bi bi-activity"></i>
         </li>
       </div>
 
       <div className="users">
         <li className='bi bi-person-fill'>
-          <span>{userName}</span>
-          <h1>1</h1>
+          <span>User</span>
+          <h1>{userName}</h1>
           <i className="bi bi-activity"> Logged In</i>
         </li>
       </div>
@@ -50,8 +50,8 @@ const Card = () => {
       <div className="solved">
         <li className='bi bi-bug'>
           <span>Solved Bugs</span>
-          <h1><CountUp end={solvedBugs} />K</h1>
-          <i className="bi bi-activity"> 0.5%</i>
+          <h1><CountUp end={solvedBugs} /></h1>
+          <i className="bi bi-activity"></i>
         </li>
       </div>
     </ul>

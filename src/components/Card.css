@@ -5,12 +5,13 @@
     list-style-type: none;
     margin-top: 70px;
     width: 4000px;
+    margin-left: 30px;
 
 }
 
 .reported{
     height: 110px;
-    width: 200px;
+    width: 250px;
     background-color: #012970;
     border-radius: 10px;
     cursor: pointer;
@@ -24,7 +25,7 @@
 .users{
     
         height: 110px;
-        width: 200px;
+        width: 250px;
         background-color: #012970;
         border-radius: 10px;
         cursor: pointer;
@@ -34,7 +35,7 @@
     }
 .solved{
     height: 110px;
-    width: 200px;
+    width: 250px;
     background-color: #012970;
     border-radius: 10px;
     cursor: pointer;
@@ -47,9 +48,12 @@
     margin-left: 5px;
 }
 .cards h1{
-    padding: px;
+    padding: 5px;
     padding-left: 35px;
 }
 .cards i{
     color: rgb(245, 142, 142);
+}
+h1{
+    font-size: 18px;
 }
