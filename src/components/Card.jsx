@@ -1,42 +1,61 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Card.css';
 import CountUp from 'react-countup';
+import axios from 'axios';
+
 const Card = () => {
+  const [reportedBugs, setReportedBugs] = useState(0);
+  const [solvedBugs, setSolvedBugs] = useState(0);
+  const [userName, setUserName] = useState('');
+
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const token = localStorage.getItem('token');
+        const authHeader = `Bearer ${token}`;
+
+        const response = await axios.get('http://localhost:5000/api/userdata', {
+          headers: { 'Authorization': authHeader }
+        });
+
+        setReportedBugs(response.data.reportedBugsCount);
+        setSolvedBugs(response.data.solvedBugsCount);
+        setUserName(response.data.userName);
+      } catch (error) {
+        console.error('Error fetching user data:', error);
+      }
+    };
+
+    fetchUserData();
+  }, []);
+
   return (
-      <ul className="cards">
-        <div className="reported"><li className='bi bi-bug-fill'
-        >
-            <span>Reported Bugs</span>
-            <h1><CountUp end={100} />K</h1>
-            
-              <i className="bi bi-activity"
-              
-              > 0.2%
-
-            </i>
-
-
-        </li></div>
-
-       <div className="users">
-       <li className='bi bi-person-fill'>
-            <span>Users</span>
-            <h1><CountUp end={110} />k</h1>
-            <i className="bi bi-activity">  0.4%</i>
+    <ul className="cards">
+      <div className="reported">
+        <li className='bi bi-bug-fill'>
+          <span>Reported Bugs</span>
+          <h1><CountUp end={reportedBugs} />K</h1>
+          <i className="bi bi-activity"> 0.2%</i>
         </li>
-        
-       </div>
-       <div className="solved">
-       <li className='bi bi-bug'>
-            <span>Solved Bugs</span>
-            <h1><CountUp end={99} />K</h1>
-            <i className="bi bi-activity">  0.5%</i>
+      </div>
+
+      <div className="users">
+        <li className='bi bi-person-fill'>
+          <span>{userName}</span>
+          <h1>1</h1>
+          <i className="bi bi-activity"> Logged In</i>
         </li>
-       </div>
+      </div>
 
-      </ul>
-
-)
+      <div className="solved">
+        <li className='bi bi-bug'>
+          <span>Solved Bugs</span>
+          <h1><CountUp end={solvedBugs} />K</h1>
+          <i className="bi bi-activity"> 0.5%</i>
+        </li>
+      </div>
+    </ul>
+  );
 }
 
 export default Card;

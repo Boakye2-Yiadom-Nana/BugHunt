@@ -51,7 +51,13 @@ const ReportChart = () => {
 
   const fetchChartData = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/reportchart');
+      const token = localStorage.getItem('token');
+      const response = await fetch('http://localhost:5000/api/reportchart', {
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      });
+
       const chartData = await response.json();
       
       setData(prevData => ({

@@ -27,7 +27,7 @@ const Login = () => {
             // Redirect to the main page after successful login
             setTimeout(() => {
                 navigate('/dashboard');
-            }, 2000);
+            }, -10);
         } catch (error) {
             console.error('Login failed:', error.response.data);
             setAlert({ type: 'danger', message: error.response.data.message || 'Login failed' });
